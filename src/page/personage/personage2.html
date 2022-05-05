@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>personage</title>
+  <link rel="stylesheet" href="../../js/element-ui/index.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <!-- <link rel="stylesheet" href="./personage.css" -->
+  <script src="../../js/vue.min.js"></script>
+  <script src="../../js/element-ui/index.js"></script>
+  <script src="../../js/jquery.min.js"></script>
+
+
+
+</head>
+
+<body style="margin:0;">
+  <div id="app">
+    <div class="header">
+      <span>The Silk Road</span>
+    </div>
+    <div class='ribbon' id="header">
+      <a href='../home/home.html'><span>Home</span></a>
+      <a href='../geography/geography.html'><span>Geography</span></a>
+      <a href='../culture/culture.html'><span>Culture</span></a>
+      <a href='../personage/personage.html'><span style="background-color: #FFD204;height:65px;">Personage</span></a>
+      <a href='../economics/economics.html'><span>Economics</span></a>
+      <a href='../politics/politics.html'><span>Politics</span></a>
+      <a href='../game/game.html'><span>Game</span></a>
+    </div>
+    <div class='personage'>
+      <!-- <p>{{message}}</p>  -->
+      <p class="title">晋</p>
+      <a href='personage.html'><p>返回</p></a>
+      <div class="block">
+       
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+  <script>
+
+    var app = new Vue({
+      el: '#app',
+      data: function () {
+        return {
+          message: "this page is personage!"
+        }
+      },
+      methods: {
+        changNav(index) {
+          this.idx = index;
+          VueScrollTo.scrollTo(document.getElementById(index), 1000, {
+            offset: -50,
+          });
+        },
+
+
+      }
+
+    })
+  </script>
+  <script type="text/javascript">//让导航栏吸附到顶部
+    window.addEventListener('scroll', function () {
+      let t = $('body, html').scrollTop();   // 目前监听的是整个body的滚动条距离
+      if (t > 190) {
+        $('.ribbon').addClass('box-active')
+      } else {
+        $('.ribbon').removeClass('box-active')
+      }
+    })
+
+  </script>
+
+
+</body>
+
+</html>
+<style lang="scss" scoped>
+  .personage {
+    margin-left: 100px;
+  }
+  
+  .title {
+    margin-left: 100px;
+    font-family: Microsoft YaHei;
+    font-size: 48px;
+    color: #3E3E3E;
+  }
+  .card-panel {
+    margin-right: 50px;
+    display: flex;
+  }
+  .show-box {
+    width: 100px;
+    height: 200px;
+    background: #FFD204;
+    display: none;
+  }
+  /* #show-box1 {
+    width: 100px;
+    height: 200px;
+    background: #FFD204;
+    display: none;
+  } */
+</style>
