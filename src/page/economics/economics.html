@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Documentation">
+    <title>Documentation of Step Wizard Form</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://jthemes.net/themes/html/wizard-form/documentation/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/stroke.css">
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="static/css/animate1.css">
+    <link rel="stylesheet" type="text/css" href="static/css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="static/css/style4.css">
+    <link rel="stylesheet" type="text/css" href="static/css/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="static/css/shThemeRDark.css" media="all">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="../../static/navibar/css/css2.css" rel="stylesheet">
+    <link href="../../static/navibar/css/all.min.css" rel="stylesheet">
+    <link href="../../static/navibar/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../static/navibar/css/animate.min.css" rel="stylesheet">
+    <link href="../../static/navibar/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../../static/navibar/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/navibar/css/style.css" rel="stylesheet">
+    <script data-cfasync="false" src="../../static/navibar/js/email-decode.min.js"></script><script src="../../static/navibar/js/jquery-3.4.1.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/bootstrap.bundle.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/wow.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/easing.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/waypoints.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/counterup.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/owl.carousel.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/main.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/rocket-loader.min.js" data-cf-settings="0080e6b992b21508d4c0eeae-|49" defer=""></script>
+
+
+    <!-- CUSTOM -->
+    <link rel="stylesheet" type="text/css" href="static/css/custom.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+    #MyDiv {
+        border-radius: 20px;
+        border-style: inset;
+        /* padding: 16px; */
+    }
+    .black_overlay{  
+        display: none;  
+        position: absolute;  
+        top: 0%;  
+        left: 0%;  
+        width: 100%;  
+        height: 100%;  
+        background-color: black; 
+        z-index:1001;  
+        -moz-opacity: 0.8;  
+        opacity:.80;  
+        filter: alpha(opacity=80);  
+    }  
+    .white_content {  
+        display: none;  
+        /* position: absolute;   */
+        position: fixed;
+        top: 10%;  
+        left: 10%;  
+        width: 70%;  
+        height: 70%;  
+        /* border: 16px solid lightblue;   */
+        /* padding: 16px; */
+        box-sizing: border-box;
+        background-color: white;  
+        z-index:1002;  
+        overflow: auto;  
+    }  
+    .white_content_small {  
+        display: none;  
+        position: absolute;  
+        top: 20%;  
+        left: 30%;  
+        width: 40%;  
+        height: 50%;  
+        border: 1px solid lightblue;  
+        background-color: white;  
+        z-index:1002;  
+        overflow: auto;  
+    }
+    .diaLogContent {
+        padding: 10px 30px;
+        box-sizing: border-box;
+    	text-align: justify;
+    }
+    .ClassCloseBox {
+        text-align: right;
+        height: 40px;
+        background-color: 	#A3D1D1;
+    }
+    .ClassClose {
+        font-size: 16px;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        display: inline-block;
+        text-align: center
+    }
+    .ClassBtn {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 5px;
+        font-size: 11px;
+    }
+    .ClassNoBtn {
+        height: 22px;
+        line-height: 22px;
+    }
+    #wrapper {
+        /* 背景图片 */
+        /* background: url('./图片/ancientWord.jpg')no-repeat;
+        background-size: cover;
+        height: 100%; */
+    }
+    .docs-sidebar .nav a{
+        font-size: 20px !important;
+        font-weight: 800 !important;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- 弹出层部分 -->
+    <div id="fade" class="black_overlay"></div>
+    <div id="MyDiv" class="white_content">
+        <div class="ClassCloseBox">
+            <span class="ClassClose" onclick="CloseDiv('MyDiv','fade')">x</span>
+        </div>
+        <!-- 这里写入弹出框的内容 -->
+        <div  class="diaLogContent">
+            <div>
+                <video width="100%" loop style="object-fit: fill;" height="180" autoplay  muted controls>
+                    <!-- 视频 更换链接为mp4均可播放 -->
+                    <source src="C:\Users\20262\Desktop\2021EBU6305G01-master\src\page\economics\images\汉唐.mp4"  type="video/mp4">
+                    您的浏览器不支持 HTML5 video 标签。
+                </video>
+            </div>
+            洛阳，世界四大圣城之一，是历史上建都时间最早，建都时间最长，建都朝代最多的世界四大古都之一，前后有十三个朝代在此定鼎九州，105位黄帝在此指点江山，是历史上唯一被命名为神都的国家历史文化名城，是丝绸之路东方起点，隋唐大运河中心枢纽，它是中华文明和中华民族主要发源地，中国的国名便源自于古洛阳。
+        </div>
+    </div>
+
+    <!-- 此盒子是导航栏部分 -->
+    <div>
+        <div class="container-fluid top-bar bg-dark text-light px-0 wow fadeIn" data-wow-delay="0.1s">
+                <div class="row gx-0 align-items-center d-none d-lg-flex">
+                <div class="col-lg-6 px-5 text-start">
+                
+                </div>
+                <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <div class="h-100 d-inline-flex align-items-center">
+                <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-facebook-f"></i></a>
+                <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-twitter"></i></a>
+                <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn-lg-square text-primary pe-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+                </div>
+                </div>
+        </div>
+                    
+                    
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index1.html" class="navbar-brand ms-4 ms-lg-0">
+        <h1 class="text-primary m-0">The Silk Road</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto p-4 p-lg-0">
+        <a href="../home/home.html" class="nav-item nav-link">Home</a>
+        <a href="../geography/geography.html" class="nav-item nav-link">Geography</a>
+        <a href="../culture/culture.html" class="nav-item nav-link">Culture</a>
+        <a href="../personage/personage.html" class="nav-item nav-link  active">Personage</a>
+        <a href="../economics/economics.html" class="nav-item nav-link">Economics</a>
+        <a href="../politics/politics.html" class="nav-item nav-link">Politics</a>
+        <a href="../game/game.html" class="nav-item nav-link">Game</a>
+        
+        </div>
+        <div class=" d-none d-lg-flex">
+        <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
+        <i class="fa fa-phone text-primary"></i>
+        </div>
+        <div class="ps-3">
+        <small class="text-primary mb-0">Call Us</small>
+        <p class="text-light fs-5 mb-0">+012 345 6789</p>
+        </div>
+        </div>
+        </div>
+        </nav>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+        
+        <img style="width:100%;height:auto;" src="images/丝绸之路轮播图3.png">
+        <div class='personage' style="margin-top:100px;margin-left:100px;">
+            <!-- <p>{{message}}</p>  -->
+        </div>
+    </div>
+    <div id="wrapper">
+        <div class="container">
+            
+            <!-- end section -->
+            <div class="row">
+                <!-- 侧边栏 -->
+                <div class="col-md-3">
+                    <!-- 侧边栏  -->
+                    <nav class="docs-sidebar" style="margin-top: 100px;" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+                        <ul class="nav">
+                            <li><a href="#general">古丝绸之路</a>
+                                <ul class="nav">
+                                    <li><a href="#g-sec">汉</a></li>
+                                    <li><a href="#g-add">唐</a></li>
+                                    <li><a href="#g-ani">宋</a></li>
+                                    <li><a href="#g-clr">元</a></li>
+                                    <li><a href="#g-bright">明</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#get-start">海上丝绸之路</a></li>
+                            <li><a href="#validation-function">现代丝绸之路</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- 主题部分 -->
+                <div class="col-md-9">
+                    <section class="welcome">
+                        <div class="row">
+                            <!-- 这里是Introduction  -->
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Introduction
+                                    <hr>
+                                </h2>
+                                <div class="row">
+                                    <div class="col-md-12 full">
+                                        <div class="intro1">
+                                            <ul>
+                                                <strong>丝绸之路是指起始于古代中国，连接亚洲、非洲和欧洲的古代路上商业贸易路线。
+                                                <br>从运输方式上分为陆上丝绸之路和海上丝绸之路。陆上丝绸之路起于西汉都城长安(东汉延伸至洛阳)。
+                                                <br>丝绸之路是一条东方与西方之间经济、政治、文化进行交流的主要道路。</strong>
+                                            </ul>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            
+                                            <div class="intro2 clearfix">
+                                                <p><i class="fa fa-exclamation-triangle"></i> 丝绸之路的开辟,有力地促进了东西方的经济文化交流,对促成汉朝的兴盛产生了积极的作用.
+                                                    <br> 这条丝绸之路,至今仍是中西交往的一条重要通路。在工业化到来的时刻,完成了它的使命.它已被东起连云港,西至荷兰鹿特丹的10900公里长的新亚欧大陆桥所取代.但是,它仍有可开发的新价值。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                    </section>
+                  
+                    <!-- end section -->
+                    <section id="general" class="section">
+                        <!-- 古丝绸之路标题 -->
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                
+                                <h2 class="dark-text">古丝绸之路 <button class="ClassBtn ClassNoBtn" onclick="ShowDiv('MyDiv','fade')">点击弹框</button><a href="#top">#back to top</a>
+                                    <hr>
+                                </h2>
+                                
+                            </div>
+                        </div>
+                        <!-- 子项 汉模块 -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 id="g-sec">汉 -</h4>
+                                <div>
+                                    <p>
+                                         
+                                        
+
+                                    _______________________________________________________ 
+                                    </p>
+                                </div>
+                                
+
+                                <div >
+                                    <strong>西汉</strong>
+                                    <br><br>
+                                    <br>先秦时期，连接中国东西方交流的通道已经存在，丝绸正式西传始于西汉通西域，丝绸之路真正形成始于西汉张骞凿空。
+                                    <br>这个时期，丝绸的传播源、传播的目的地、传播的路线都非常清楚，有史可依，有据可查，传播的数量也非常大，东西方是有计划、甚至是有组织的进行丝绸贸易，所以丝绸之路真正开辟于西汉武帝时期。
+                                    <br>最早可以追溯到西汉武帝时期。在当时，丝绸之路其实是为政治目的而生的，并非商业发展到一定阶段的产物。
+                                    <br>当时的汉武帝为了联合西域诸国共同抵御北方日益强的匈奴，特地派遣了张骞作为大汉使者前往西域。
+                                    <br>张骞一行人带上了汉朝所特有的“名器”丝绸前去拜访，这也就是为什么称之为“丝绸之路”的原因所在。
+                                    <br>后来随着中原与西域的交往越发密切，丝绸之路的功效也越来越多。不仅多次为国家的政治联盟服务，还未中原与西域的通商提供了来往途径。
+                                    可以说，丝绸之路是西汉政治和商业发展的一大功臣，在西汉历史上具有举重若轻的地位。
+
+                                </div>
+                                <div>
+                                    <p>
+                                         
+                                        
+
+                                    _______________________________________________________ 
+                                    </p>
+                                </div>
+
+                                <strong>东汉</strong>
+                                <br><br>
+                                <br>永平十六年（73年），班超随从大将军窦固出击北匈奴，并奉命出使西域。他率吏士36人首先到了鄯善，以“不入虎穴，焉得虎子”的决心，使鄯善为之震服。
+                                <br>之后他又说服于阗，归附中央政府。班超又重新打通隔绝58年丝绸之路，并帮助西域各国摆脱了匈奴的控制，被东汉任命为西域都护，班超在西域经营30年，加强了西域与内地的联系。
+                                <br>永元三年（91年），北道的龟兹、姑墨、温宿皆归附东汉，班超设西域都护府于龟兹它乾城，亲自坐镇北道。又命西域长史徐干屯疏勒，与北道相呼应。
+                                <br>永元六年（94年），班超发龟兹、鄯善等八国兵7万余人，讨伐对抗中央的焉耆等国统治者，西域50余国皆归属中央政府。
+                                <br>永元九年（97年），班超曾派副使甘英出使大秦国（罗马帝国），一直到达条支海（今波斯湾），临大海欲渡，由于安息海商的婉言阻拦，虽未能实现，但这是首次突破安息国的阻拦，将丝绸之路从亚洲延伸到了欧洲，再次打通已经衰落的丝绸之路。
+                                
+                            </div>
+                        </div>
+                        <!-- 子项 唐模块 -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    <p>
+                                         
+                                        
+
+                                    _______________________________________________________ _______________________________________________________
+                                    </p>
+                                </div>
+                                <h4 id="g-add">唐 - </h4>
+                               
+                              
+                                <div style="min-height: 408px;">
+                                   <strong> 丝绸之路在唐代基本上还是延续了前代的线路，横跨亚欧大陆。唐朝的丝绸之路有所开拓，将南北朝以来因战乱而中断的部分路段进行了疏通，并开通了天山北路的一段。
+                                    唐代的丝绸之路从长安（今西安）出发，经甘肃河西走廊（青海，宁夏也有平行线路）至新疆，过天山南北到中亚，一路到中东地区，另一路到欧洲。其中过天山以后还有一条线路到印度。
+                                    <br><br>唐代时，东西方经济文化交流出现了高潮，丝绸之路也繁荣无比。
+                                    <br>唐代丝绸之路的内容和特点是陆海两路相继繁荣和交替。作为唐代前期出现的陆上丝路高潮，不过是继汉代以来陆上丝路发展的"顶峰"，随着这个高潮的先后出现，
+                                    <br>从此陆上丝路也就失去了发展的优势（当然是相对海上丝路而言）；
+                                    <br>而唐代中期后，海上丝路发展史上也处于重要的转折时期。因此，要了解海上丝路的发展，就要研究唐代陆海丝路的变化和交替。
+                                    <br>举世闻名的丝路，既是架设在东西方之间的友好桥梁，又是联结国内各民族的重要纽带。
+                                    <br>因此，从丝路形成之日起，其发展的总趋势，不仅是向东西方延伸，同时也向南北方向扩展。</strong>
+                                    <br><br>从汉代开始，陆上丝路就沿着天山南北逐渐形成了东西交往的北、中、南三条基本干线；同时又由于南北边塞各民族的频繁活动，为唐代丝路向南北扩展奠定了基础。
+                                    <br>贞观四年（公元630年），唐太宗李世民率军击败了东突厥贵族政权，并和西突厥加强了友好联系，接着又扫除了高昌、焉耆、龟兹等分裂势力。
+                                    <br>贞观十四年（公元640年），唐朝在西域地区设立了安西大都护府，统辖了下属的各个都督府、州，进一步加强了西部边疆的军事和行政管理，保证了丝路的繁荣畅通。
+                                    <br>不久以后，唐朝政府又完成了对漠北地区的统一。贞观二十年（公元646年），唐军乘其内乱攻入漠北，薛延陀政权瓦解，下属回纥等铁勒13部归附唐朝，并"请置唐官"。
+                                    <br>唐朝政府于其故地设置了六府七州，后来又于贝加尔湖东北和唐努乌梁海一带增设了玄阙州、烛龙州和坚昆都督府。上述各个府、州长官都督、刺史，皆由唐朝政府委任原诸部酋长担任，并归属于设立在故单于台（故址在今内蒙古呼和浩特市西）的燕然都护府所统领。
+                                    <br>此后，又应铁勒各部所请，特在回纥以南开辟了"参天可汗道"，沿途置邮驿68所，并备有驿马、酒肉等专供往来官吏和行贾。通过此"参天可汗道"，不仅加强了漠北与中原之间的联系，而且也开辟了西部与北部边疆往来的通道。从此以后，西部地区已和广大漠北连成一片，因而丝路向北面获得了显著扩展。
+                                    <br><br><strong>唐朝贞观年间，中国僧侣游历印度的东道，并详细记载了从河西，经青海，由西藏进入尼泊尔的具体路线。
+                                    <br>通过上述支线的开辟，不仅说明了此道的繁荣畅通，同时也反映了丝路已向南面大大扩展。
+                                    <br>作为唐代前期丝路发展高峰的另一明显反映，是丝路北道的重要和繁荣以及沿北道上一些新兴都市和贸易中心的出现。</strong>
+                                    <br>其中著名的有庭州、弓月、轮台、热海、碎叶、垣逻斯等等。陆上丝路虽然在唐代前期发展到了高峰，形成了它的"黄金时期"，
+                                    <br>但好景不长，到了唐代中期便突然衰落。随着"安史之乱"爆发，唐朝驻守西疆的四镇边兵东调长安，一时西北边防空虚，吐蕃乘机北上占据河陇，回鹘亦南下控制了阿尔泰山一带，同时西边的大食亦加强了中亚河中地区的攻势，
+                                    <br>随之出现了这三种力量之间的争夺与混战。从此，唐朝政府失去了对西域的控制，一时丝路上"道路梗绝，往来不通"。由于唐朝失去了和西域的联系，陆上丝路由此中断，因而反映在杜甫的诗中有"乘槎消息断，何处觅张骞"的哀叹以及"崆峒西极过昆仑，驼马由来拥国门，数年逆气路中断，蕃人闻道渐星奔"的描述
+                                </div>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- 子项 宋模块 -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    <p>
+                                         
+                                        
+
+                                    _______________________________________________________ _______________________________________________________
+                                    </p>
+                                </div>
+                                <h4 id="g-ani">宋 - </h4>
+                                
+                        
+                                <div style="min-height: 600px">
+                                   <strong> 北宋实际版图大幅缩减，政府未能控制河西走廊，到了南宋时期，更无法涉足西北地区，丝绸之路衰落日益明显，而海上丝路崛起，逐渐有取代陆上丝绸之路的迹象。</strong>
+                                   <br>据史料记载，当时在漫长的东西方陆路商道上从事商队贩运贸易的，有欧洲商人、有西亚、中亚地区的商人以及中国色目商人等。
+                                   <br>欧州和中、西亚商人一般都携带大量金银、珠宝、药物、奇禽异兽、香料、竹布等商品来中国或在沿途出售，
+                                   <br>他们所购买的主要是中国的缎匹、绣彩、金锦、丝绸、茶叶、瓷器、药材等商品。
+                                   <br>元代来中国的外国商人、商队为数之众，在外国史料中多有印证。《马可·波罗游记》中几处写道：元大都外城常有“无数商人”、“大量商人”来往止息，“
+                                   <br>建有许多旅馆和招待骆驼商队的大客栈，……旅客按不同的人种，分别下榻在指定的彼此隔离的旅馆”。既为不同人种，无疑为外国客商。
+                                   <br>《通商指南》也指出，“……汗八里都城商务最盛。各国商贾辐辏于此，百货云集”。
+                                </div>
+                           </div>
+                           <!-- end col -->
+                        </div>
+                        <!-- 子项 元模块 -->
+                        <div class="row">
+                        <div class="col-md-12">
+                            <h4 id="g-clr">元 - </h4>
+                            
+                            
+                            
+                            <div style="min-height:800px">
+                                <strong>
+                                元朝时“丝绸之路经济带”各国主要指蒙古四大汗国：钦察汗国、窝阔台汗国、察合台汗国以及伊利汗国，此时畏兀儿地区已经归附元朝，不包括在内。
+                                <br>钦察汗国，又称金汗国或术赤兀鲁思，由术赤的封地发展而来。包括扎牙黑水（今乌拉尔河）以东的钦察草原东部和阿姆河下游的花剌子模北部和忽阐河下游汇入咸海处。
+                                <br>察合台汗国由察合台的封地发展而来，东达今吐鲁番，西及阿姆河，北接花剌子模和塔尔巴哈台山，南临印度。
+                                <br>窝阔台汗国由窝阔台的始封地发展而来，在霍博（今新疆和布克赛尔蒙古自治县）和叶密立（今新疆额敏县）一带，与察合台的始封地相邻。
+                                <br>窝阔台汗国存在的时间较短，海都之乱后，领地被察合台汗国和伊利汗国瓜分。伊利汗国领土东起阿姆河和印度河，与察合台汗国和印度为邻；
+                                <br>西临地中海，领有今小亚细亚半岛的大部分，与埃及和欧洲相望；北至太和岭和花剌子模，与钦察汗国接壤，南临波斯湾和阿拉伯海。四大汗国疆域广阔，包括了现今中西亚大部分国家地区。
+                                <br>元朝与中西亚地区的交通基本依靠西北诸汗国与元朝修建的驿路，各国商人商队以及元朝皇帝、诸王的使者与运输队只能依靠驿路穿梭于各地区之间。
+                                <br>驿路之中，风险重重，不乏劫掠财物的强盗，沿途的驿站除了为商人提供必要的食宿外，还能够提供武装保卫，这是优于其他路径的。
+                                <br>因此，理清西北诸国同元朝的交通路线，也就基本清楚元朝同西北诸国的金银流通路线了。
+                                <br>早在辽金时期，西夏雄踞西北，中原汉地与西方国家往来，多取道自漠北或海上。而畏兀儿部君主巴而术·阿而忒·的斤亦都护归降成吉思汗后，畏兀儿地区（高昌回鹘）与中原汉地的联系变得密切起来，中西交通路线有了改进与新的开辟。
+                                <br>此时的中西交通主要存在以下几条道路。</strong>
+                                <br><br>   （一）北道根据
+                                <br>《元代中外交通路线图》可知，自大都西行，经过宣德、大同，继续西去，过 丰 州、宁 夏，达 于 甘 州（今甘肃张掖），再由和宁西行或西南行分别到达别失八里（今新疆奇台东北）、哈密力（今新疆哈密）、阿里
+                                麻里（今新疆旧霍城）等地，以上诸路衔接汉唐以来的丝绸之路。这段道路被称为中国与西亚之间的“北道”，在成吉思汗西征时，曾经受到整修。原来金山一带“深谷长堑，车不可行”，后来经过蒙古军队“凿石理道，刊木为四十八桥，桥可并车”。这条道路在成吉思汗西征时就已经为中西贸易发挥了作用，李志常曾记载：“路逢征 西 人 回，多 获 珊 瑚，有从官以白金二镒易 之，近 五 十 株，高 者 尺 余。”。可 见， “北道”在大蒙古帝国分裂前应当是沟通东西方的主要商道
+                                <br>
+                                <br>（二）南道<br>
+                                “北道”虽经修整，但行路仍十分艰难。于是太宗窝阔台继位后，命按竺迩“自敦煌置驿抵玉关，通西域”，开辟了“南道”，直到阿里不哥与海都叛乱，“南道”一直是蒙元时期汉地与西北诸汗国的重要商道之一。“南道”起初是建立在按竺迩“通西域”的道路基础之上的。但由于阿里不哥与忽必烈争夺汗位引发的战争，致使西方诸国的使者与商队改经钦察汗国直接由草原道路进入哈剌和林，按竺迩经营的“南 道”转于沉寂。元朝建立后，为抗衡察合台汗国与窝阔台汗国的联盟，忽必烈任命自己的弟弟旭烈兀为伊利汗，同伊利汗国建立了紧密的同盟。旭烈兀在自己的领地内建立了与元朝一样的驿站制度，连接着元朝的驿路，沟通中西。这样一来，忽必烈与旭烈兀的结盟主宰了整个蒙元帝国，双方的使臣经河中大道的驿站往来不息。这条驿路就成为之后“南道”的主体部分。面对兴起的伊利汗国，其他的三个汗国感到了威胁，加之皇位继承的积怨，术赤家族同察合台家族以及窝阔台家族联合起来，他们的盟主海都成为七河地与河中地无可争议的绝对统治者。海都及其联盟对元朝的对抗，使得除“南道”以外其它通往中原的道路全部阻隔，这时元廷与伊利汗国之间“南道”的重要地位就凸现出来了。
+                                除了战乱带来的威胁外，这条中西通道上还存在着其它的困难，一是伊利汗国内诸王异密擅用驿路驿站，无论大事小情都要成帮结队在驿站索取马匹、饮食，不但侵扰驿站附近的居民，甚至在驿路上抢劫斗殴。面对此种情况伊利汗国君主下令修整道路，整顿驿站，禁止任何人因私事随便乘驿，给使者以路费及牌符，不准随意侵扰驿站。据《史集》记载，这之后“蒙古人和游牧民免除了沉重负担，沿途来往的商人安全了，城乡居民心情安定地从事建设和农耕”。此时，元朝境内的驿站已经满足不了日益增长的驿传任务，忽必烈续修整完善原本的“南道”，至元十八年（１２８１年），元政府沿太和岭至别失八里一线，设置了３０个新驿站。太和岭地处今山西北部，雁门附近，有直通大都的驿道，“把元朝的政治中心与畏兀儿地紧紧连接起来”。这些驿站沿经河西地区穿过塔里木盆地和昆仑山至葱岭的驿路而建，为东西方来往的商人、使者提供服务，马可波罗就是沿此驿路来到中国。 
+                                <br>
+                                <br>（三）其他道路<br>
+                                西北诸汗国与元朝约合之后，钦察汗国归附于宗主国元朝，原本的道路阻断不再存在。当时的欧洲商人能够经由钦察汗国的玉龙杰赤直抵大都。１４世纪上半叶，塔纳城的商业相继操纵在热那亚和威尼斯商人手里。许多欧洲商贾从这里出发到中国从事贸易活动。“从匈牙利甚至从意大利来的商人，不用去中国，在钦察汗国都城别儿哥萨莱就可以买到中国的丝织品”。我们可以根据裴哥罗梯的《通商指南》中记录得知，这条商路由欧洲塔那出发至靖塔昌，再由靖塔昌至钦察汗国的撒雷，由撒雷可乘船至撒拉康科。再由撒拉康科至玉龙杰赤，由玉龙杰赤至干脱罗儿，也可由撒拉康科直至干脱罗儿。最后由干脱罗儿至阿力麻里，由阿力麻里骑驴七十日便可至甘州，再由甘州骑马至一大河。复由河道下行，至京师。非常清楚地记述了该路线，这也是商人来往中西方的重要路线之一。
+
+                            
+                            </div>
+                        </div>
+                        <!-- end col -->
+                        </div>
+                        <!-- 子项 明模块 -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div>
+                                    <p>
+                                         
+                                        
+
+                                    _______________________________________________________ _______________________________________________________
+                                    </p>
+                                </div>
+                                <h4 id="g-bright">明 - </h4>
+                                
+                                <div style="min-height:500px">
+                                   <strong> 明朝海上丝绸之路就出现了一个转斩点: 一是由盛变衰, 二是新开辟美洲丝绸之路。
+                                    <br>明朝是中外关系逆转 的关键时期, 明前期的郑和下西洋开创了海上对外经济交往的壮举, 但明中叶以后, 反抗外侵略、打击民间海 上走私成为对外政治经济关系的新特点。
+                                    <br>这一时期奉行“禁海”闭关政策, 严重阻碍了民间中外经济、文化的交 流, 货币流通也出现新变化。 
+                                    <br>明前期及郑和七次西洋之行的货币文化特点 明前期的海上丝绸之路经济交往仍然是以亚洲、非洲沿海为主要目的地。
+                                    <br>但朱元璋上台后对外关系采取和 以前截然相反政策。即下令禁止沿海地区居民私自出海, 即“禁海”, 一方面杜绝走私, 另一方面防止海盗和倭 寇抢掠。
+                                    <br>但朱元璋也意识到中国和海外政治、经济联系不可能完全断绝, 又采取“贡舶”制度, 允许海外国家以 “朝贡”名义由海道来中国, 在明朝政府的监督下进行有限制的贸易活动。
+                                    <br>凡是得到明朝政府认可的国家均发 给“勘合”( 证书合同) , 定期( 3、5、10 年) 前来朝贡一次, 称为勘合贸易。
+                                    <br>对持有勘合来中国的海船, 其所带的贡品( 香料、药材、珍宝、金银) , 明朝政府根据其数量和价值给予相应的“赏赐”( 丝绸、瓷器、铜钱) 。
+                                    <br> 到永乐帝朱棣时期, 积极开展海外官方贸易, 接连派使臣前往海外诸国, 其中规模最大的是郑和下西洋 ( 印度洋半岛及其以西地区)。郑和船队先后 7 次( 1405- 1433 年) 出使海外, 
+                                    <br>每次 27000 人左右, 各次航线基本 一致。在海上丝绸之路发展史上是前所未有的, 对经济及货币文化的交往起到一定推动作用。 这一时期货币文化特点:</strong>
+                                    <br><br>
+                                     ( 一) 中国用丝绸换取阿拉伯商人的金银。
+                                     <br>  郑和的使命之一是到东非寻找黄金, 但黄金产地在西非内陆, 当 时只有阿拉伯人才能通过黑人酋长获得黄金。阿拉伯商人带着黄金到中国的口岸, 和中国官方做生意, 于是这些黄金白银流入官方金库。 
+                                     <br><br>( 二) 官方垄断贸易, 实行的是严格的外汇管制政策。
+                                     <br>明朝为了获得急需的金银, 垄断官方贸易, 禁止海上民间对外经济交往, 于是郑和的另一个任务, 就是用武力破坏中国的民间海外贸易基地, 
+                                     <br>使阿拉伯商人只能和 官方商行做生意。这实际上是一种严格外汇( 黄金) 管制政策, 和当今黄金外汇放开前是差不多的。 
+                                     <br>( 三) 世界上有了公认的硬通货。随着西非黄金外运, 并大量充当商品交换的等价物, 黄金普遍得到交易双 方接受, 世界有了公认的货币 -黄金, 世界贸易因此迅速扩展。
+                                     
+                                     <br><br>
+                                     <strong>
+                                         <br>明中后期以后的新海上丝绸之路货币文化 从西班牙哥伦布“发现”美洲之后, 国际贸易发生了巨大变化。因为美洲盛产金银, 当时世界白银的 80% 来自美洲。西班牙占领大片美洲土地, 在盛产白银的美洲殖民地设厂铸造银币,
+                                         <br> 这些银币通过墨西哥的阿卡普 尔科港横渡太平洋, 经吕宋( 即菲律宾) 中转后到达我国东南沿海的福建、广东一带, 通过交易后, 又把中国的 丝绸、瓷器运往美洲。这条海上贸易航线, 被称为“中世纪海上美洲丝绸之路”。这时阿拉伯商人在国际贸易中 的地位迅速下降, 
+                                         <br>因为对外贸易不再需要西非的黄金, 欧洲人可以用美洲的白银买中国的产品。 新航线开辟使中国的海上丝绸之路延伸到美洲, 这是划时代的。从明正德十二年( 1517 年) 以后, 欧洲、美 洲与中国的直接贸易从无到有, 逐渐发展到了可观的规模。明代中后期, 中国与美洲间的贸易航线起点是福建 月港( 今龙海海澄) 、
+                                         <br>厦门和广州等地, 以马尼拉为中转口岸, 终点在墨西哥、秘鲁, 依靠转口贸易, 马尼拉成为 亚洲最大贸易中心之一。由于西属美洲市场需求量大, 中国丝织品和棉织品很快跃居马尼拉大商船输往美洲货 物榜首。当时满载丝绸和其他货物的中国商船回国后都装载白银, 其他货物很少。这时世界贸易变为大三角贸易, 即西方把工业品运到美洲, 从美洲把白银运到中国( 或运到欧洲, 再从欧洲运到中国) , 从中国买了丝绸、茶 叶, 运到欧洲。结果, 世界白银的很大一部分流入中国。1598 年由美洲运回菲律宾马尼拉白银为 100 万比索( 西班牙银元, 每枚重七钱二分) , 1602 年为 200 万比索, 1620 年为 300 万比索, 这些白银主要用来购买中国的丝 绸、生丝和其他货物。一
+                                         <br>个西班牙贵族感慨地说:“中国国王能用从秘鲁运来的银条建造一座宫殿”。 这一时期货币文化主要特点: </strong>
+                                         <br><br>( 一) 银币成为主币, 银本位货币制度确立。明朝建立后, 曾在全国行用纸币-大明宝钞, 禁止用金、银作 流通手段。但没过多久, 纸币价值越来越下铁, 到十五世纪中期被迫允许白银作为流通手段, 废纸币不用, 此后 白银成为中国的本位货币, 铜钱作为辅币。当时市场上 90%用白银交易, 不足 10%用铜钱。随着巨额海外白银 流入中国, 加快了中国货币经济的步伐, 中国银本位货币制度逐步得以确立。 
+                                         <br>( 二) 外国货币渗透到国内, 并影响着中国货币制度。随着美洲丝绸之路的拓展, 西班牙在美洲铸造的“十 字银币”大量流入我国。根据铸地标记和铸造年号区分,“十字银币”有墨西哥、秘鲁、玻利维亚、智利、危地马 拉、哥伦比亚等国铸造以及有铸造年号和无铸造年号等多种版本。这些十字银币具有重量统一、可以按枚计算和易于点数的特点, 在我国东南沿海一带广为流通, 时间长达近 200 年, 而且几乎成为当时闽南的本位币。(二) 明中后期以后的新海上丝绸之路货币文化 从西班牙哥伦布“发现”美洲之后, 国际贸易发生了巨大变化。因为美洲盛产金银, 当时世界白银的 80% 来自美洲。西班牙占领大片美洲土地, 在盛产白银的美洲殖民地设厂铸造银币, 这些银币通过墨西哥的阿卡普 尔科港横渡太平洋, 经吕宋( 即菲律宾) 中转后到达我国东南沿海的福建、广东一带, 通过交易后, 又把中国的 丝绸、瓷器运往美洲。这条海上贸易航线, 被称为“中世纪海上美洲丝绸之路”。这时阿拉伯商人在国际贸易中 的地位迅速下降, 因为对外贸易不再需要西非的黄金, 欧洲人可以用美洲的白银买中国的产品。 新航线开辟使中国的海上丝绸之路延伸到美洲, 这是划时代的。从明正德十二年( 1517 年) 以后, 欧洲、美 洲与中国的直接贸易从无到有, 逐渐发展到了可观的规模。明代中后期, 中国与美洲间的贸易航线起点是福建 月港( 今龙海海澄) 、厦门和广州等地, 以马尼拉为中转口岸, 终点在墨西哥、秘鲁, 依靠转口贸易, 马尼拉成为 亚洲最大贸易中心之一。由于西属美洲市场需求量大, 中国丝织品和棉织品很快跃居马尼拉大商船输往美洲货 物榜首。当时满载丝绸和其他货物的中国商船回国后都装载白银, 其他货物很少。这时世界贸易变为大三角贸易, 即西方把工业品运到美洲, 从美洲把白银运到中国( 或运到欧洲, 再从欧洲运到中国) , 从中国买了丝绸、茶 叶, 运到欧洲。结果, 世界白银的很大一部分流入中国。1598 年由美洲运回菲律宾马尼拉白银为 100 万比索( 西班牙银元, 每枚重七钱二分) , 1602 年为 200 万比索, 1620 年为 300 万比索, 这些白银主要用来购买中国的丝 绸、生丝和其他货物。
+                                         
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="get-start" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">海上丝绸之路 <button class="ClassBtn ClassNoBtn" onclick="ShowDiv('MyDiv','fade')">点击弹框</button><a href="#top">#back to top</a>
+                                    <hr>
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            
+                        </div>
+                        <div style="min-height: 20px">
+                            <strong><br>海上丝绸货币文化的启示 
+                            <br><br>( 一) 用价值符号代替足值金银币成为必然, 金银不充当交易媒介而成为代表财富的贵重商品。
+                            <br>现在金银 的作用比古代小多了, 这是因为真正纸币制度的确定并盛行。不论是人民币、美元、欧元, 还是其他国家货币都无一例外地使用纸币( 当然也有少部分硬币) , 不再和金银挂钩。
+                            <br>纸币不过是一种价值符号, 本身不具有价值, 只是代表价值和财富, 但它对于商品交换、货币汇兑带来极大便利, 促进贸易的快速发展, 象征着时代的进步。
+                            <br> 而黄金白银退出货币行列后, 却成为另一种可以用货币买得到的贵重商品, 在一定程度上它成为财富的象征, 成为国际储备的一部分。从中国情况看, 这种人造货币把经济交往中最大问题解决了 - - 不用下西洋去找黄金 白银, 
+                            <br>不会因为缺乏货币问题而头疼。按此推理, 往后电子货币成为世界贸易媒介也将是一种趋势。 
+                            <br><br>( 二) 足值的金银充当介能够自身保值, 为了符合货币流通规律, 本身没有价值的纸币也必须保持 其代表价值的相对稳定。“货币流通规律”要求货币的流通量与实际需要量相适应, 即货币代表的价值量与商 品劳务的价值量相等。金银币本身是一种特殊商品, 具有价值和使用价值, 能够自动进行保值, 不会导致货币大 幅升、贬值波动。但纸币不行, 它本身没有价值, 其面值是代表一定的商品价值量, 容易受发行量的影响出现剧烈波动。但纸币也必须符合货币流通规律, 即纸币流通量符合商品劳务需要量, 纸币能保持相对稳定。否则货币大幅贬值, 物价飞涨, 货币体系就会崩溃, 经济也就陷入混乱。这要求政府不能无限量发行纸币, 必须根据市场商品劳务需求量有计划地印制, 调控好纸币在市场上的流通量, 才能保持货币代表价值的稳定性。 
+                            <br><br>( 三) 对外开放是货币经济交往的必然, 也是维持国际收支平衡的需要。16 世纪西欧殖民国家开始进行海 外扩张时, 中国仍然是一个不落后于他人的世界先进大国。但是中国的落伍也正是从这时开始了。在各国利用海上通道大力发展对外贸易的时代, 本来高度发达的中国却反而日益封闭, 明王朝实行禁绝民间海外贸易的保守主义政策, 结果失去跟上潮流发展的机遇。如果当时明王朝继续实行永乐及宣德前期那样积极的海外贸易政 策, 以当时中国的航海和国家经济实力, 中国的海外贸易会得到蓬勃发展。这就提示, 要发展经济, 获得更多的 财富, 对外开放是必然之路。再从货币收支看, 当时政府缺乏金银货币, 亟需用丝绸等产品换取国外的黄金白 银, 以满足国内货币需求和国际储备与支付的需要。加上大量的黄金白银等外汇流入, 带来了大量的工作机会, 能够创造出更多产品满足国内外市场, 其结果是使国内货币需求和国际贸易收支达到基本平衡
+                        </div></strong>
+                        <!-- end row -->
+                        <!-- <div class="row">
+                            <div class="col-md-12">
+                                <h4 id="g-sec">汉 - <a href="#top">#back to top</a></h4>
+                                <p>Wizard Step Layout Setting</p>
+
+                                <div >
+                                    海上丝绸之路（汉）内容部分
+                                </div>
+                                
+                            </div>
+                        </div> -->
+                        <!-- end row -->
+                    </section>
+                    <!-- 现代丝绸之路部分 -->
+                    <section id="validation-function" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">现代丝绸之路 <button class="ClassBtn ClassNoBtn" onclick="ShowDiv('MyDiv','fade')">点击弹框</button><a href="#top">#back to top</a>
+                                    <hr>
+                                </h2>
+                            </div>
+                            <!-- end col -->
+                            <div class="col-md-12">
+                                <p> 21世纪海上丝绸之路，是2013年10月习近平总书记访问东盟时提出的战略构想。</p>
+                            </div>
+                            <div style="min-height: 300px">
+                               <strong> 海上丝绸之路自秦汉时期开通以来，一直是沟通东西方经济文化交流的重要桥梁，而东南亚地区自古就是海上丝绸之路的重要枢纽和组成部分。
+                                   中国着眼于与东盟建立战略伙伴十周年这一新的历史起点，为进一步深化中国与东盟的合作，提出“21世纪海上丝绸之路”的战略构想。
+                                <br>国家发展改革委、外交部、商务部联合发布的《推动共建丝绸之路经济带和21世纪海上丝绸之路的愿景与行动》中，提出：
+                                <br>利用长三角、珠三角、海峡西岸、环渤海等经济区开放程度高、经济实力强、辐射带动作用大的优势，加快推进中国（上海）自由贸易试验区建设，支持福建建设21世纪海上丝绸之路核心区。
+                                <br>                                <br>
+
+                                <div class="col-md-12">
+                                    <p> 充分发挥深圳前海、广州南沙、珠海横琴、福建平潭等开放合作区作用，深化与港澳台合作，打造粤港澳大湾区。</p>
+                                </div>
+                                <br>推进浙江海洋经济发展示范区、福建海峡蓝色经济试验区和舟山群岛新区建设，加大海南国际旅游岛开发开放力度。
+                                <br>加强上海、天津、宁波－舟山、广州、深圳、湛江、汕头、青岛、烟台、大连、福州、厦门、泉州、海口、三亚等沿海城市港口建设，强化上海、广州等国际枢纽机场功能。
+                                <br>以扩大开放倒逼深层次改革，创新开放型经济体制机制，加大科技创新力度，形成参与和引领国际合作竞争新优势，成为“一带一路”特别是21世纪海上丝绸之路建设的排头兵和主力军。
+                                <br>发挥海外侨胞以及香港、澳门特别行政区独特优势作用，积极参与和助力“一带一路”建设。
+                                
+                                </strong>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+</div>
+
+<!-- end wrapper -->
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/bootstrap.min2.js"></script>
+<script src="static/js/retina.js"></script>
+<script src="static/js/jquery.fitvids.js"></script>
+<script src="static/js/wow.js"></script>
+<script src="static/js/jquery.prettyPhoto.js"></script>
+<!-- CUSTOM PLUGINS -->
+<script src="static/js/custom1.js"></script>
+<script src="static/js/main1.js"></script>
+<script src="static/js/shCore.js"></script>
+<script src="static/js/shBrushXml.js"></script>
+<script src="static/js/shBrushCss.js"></script>
+<script src="./static/js/time.js"></script>
+<script src="static/js/shBrushJScript.js"></script>
+<script>
+
+//弹出隐藏层
+function ShowDiv (show_div , bg_div ) {
+    document.getElementById(show_div).style.display = 'block';
+    document.getElementById(bg_div).style.display = 'block';
+    let bgdiv = document.getElementById(bg_div)
+    bgdiv.style.width = document.body.scrollWidth;
+    $('#' + bg_div).height($(document).height())
+}  
+//关闭弹出层  
+function CloseDiv (show_div,bg_div) {  
+    document.getElementById(show_div).style.display='none';  
+    document.getElementById(bg_div).style.display='none';  
+};
+
+</script>
+</body>
+
+
+</html>
