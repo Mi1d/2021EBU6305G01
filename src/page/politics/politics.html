@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../../js/jquery.min.js"></script> 
-    <link rel="stylesheet" href="../../css/header.css">
-    <title>culture</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/ico" href="../../img/home.ico">
+    <title>The Silk Road Museum</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="../../static/navibar/css/css2.css" rel="stylesheet">
+    <link href="../../static/navibar/css/all.min.css" rel="stylesheet">
+    <link href="../../static/navibar/css/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../static/navibar/css/animate.min.css" rel="stylesheet">
+    <link href="../../static/navibar/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../../static/navibar/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/navibar/css/style.css" rel="stylesheet">
+    <script data-cfasync="false" src="../../static/navibar/js/email-decode.min.js"></script><script src="../../static/navibar/js/jquery-3.4.1.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/bootstrap.bundle.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/wow.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/easing.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/waypoints.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/counterup.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/owl.carousel.min.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/main.js" type="0080e6b992b21508d4c0eeae-text/javascript"></script>
+    <script src="../../static/navibar/js/rocket-loader.min.js" data-cf-settings="0080e6b992b21508d4c0eeae-|49" defer=""></script>	<a href="#" style="display:none;"></a>
+
 
  <style>
      
     .main{height: 50px;border: 1px green;}
     /* 按钮设置 */
-    button:active{ box-shadow: 0 5px #666;transform: translateY(4px);}
+    button:hover{ box-shadow: 0 5px #666;transform: translateY(4px);}
     button:focus{outline:none;}
     button{ height: 50px; width: 150px;}
     /* 时间轴 */
     .TimerShaft{
         position:absolute;
         left:10%;top:85%;
-        height: 12%; width: 73%;
+        height: 12%; width: 74%;
         background-image: url(../../img/T.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -28,18 +48,43 @@
     .btn1{
         position:absolute;
         left:17%;top:80%;
+        border-radius: 10px;
+        color: #daa812;
     }
     .btn2{
         position:absolute;
         left:34%;top:80%;
+        border-radius: 10px;
+        color: #daa812;
     }
     .btn3{
         position:absolute;
         left:51%;top:80%;
+        border-radius: 10px;
+        color: #daa812;
     }
     .btn4{
         position:absolute;
         left:68%;top:80%;
+        border-radius: 10px;
+        color: #daa812;
+    }
+    /* 悬停时改变按钮样式 */
+    .btn1:hover{
+    background-color: #daa812; /* Green */
+    color: white;
+    }
+    .btn2:hover{
+    background-color: #daa812; /* Green */
+    color: white;
+    }
+    .btn3:hover{
+    background-color: #daa812; /* Green */
+    color: white;
+    }
+    .btn4:hover{
+    background-color: #daa812; /* Green */
+    color: white;
     }
     /* 第一张网页的圆形按钮，A代表第一页 */
     #btn_CirclerA1{
@@ -91,7 +136,7 @@
         background-image: url(../../img/rich.png);
         background-size: cover;
     }
-    /* 第三张网页的圆形按钮,B代表第二页 */
+    /* 第三张网页的圆形按钮,C代表第三页 */
     #btn_CirclerC1{
         height: 6%; width: 3%;
         border-radius: 50%;
@@ -116,12 +161,12 @@
         background-image: url(../../img/palace.png);
         background-size: cover;
     }
-    /* 第四张网页的圆形按钮,B代表第二页 */
+    /* 第四张网页的圆形按钮,D代表第四页 */
     #btn_CirclerD1{
         height: 6%; width: 3%;
         border-radius: 50%;
         position:absolute;
-        left:44.5%;top:28%;
+        left:49.5%;top:28%;
         background-image: url(../../img/universe.png);
         background-size: cover;
     }
@@ -129,7 +174,7 @@
         height: 6%; width: 3%;
         border-radius: 50%;
         position:absolute;
-        left:43%;top:38%;
+        left:55%;top:50%;
         background-image: url(../../img/Horse.png);
         background-size: cover;
     }
@@ -146,102 +191,183 @@
     .textarea_A1{
         display: none;
         position:absolute;
-        left:22.5%;top:44%;
-        width: 10%;height: 14%;
+        left:21%;top:44%;
+        width: 20%;height: 20%;
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
     .textarea_A2{
         display: none;
         position:absolute;
         left:46%;top:55%;
-        width: 10%;height: 14%;
+        width: 20%;height: 20%;
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
     .textarea_A3{
         display: none;
         position:absolute;
-        left:57.5%;top:36%;
-        width: 10%;height: 14%;
-        
+        left:57%;top:35.5%;
+        width: 25%;height: 30%;
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
-    /* 第二张网页的文本框，A代表第一页 */
+    /* 第二张网页的文本框，b代表第二页 */
     .textarea_B1{
         display: none;
         position:absolute;
-        left:9%;top:45%;
-        width: 10%;height: 14%;
+        left:10%;top:49%;
+        width: 20%;height: 14%;
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
     .textarea_B2{
         display: none;
         position:absolute;
-        left:25%;top:37%;
-        width: 10%;height: 14%;
+        left:26%;top:40%;
+        width: 20%;height: 14%;
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
     .textarea_B3{
         display: none;
         position:absolute;
-        left:54%;top:40%;
-        width: 10%;height: 14%;
-        
+        left:54.8%;top:27%;
+        width: 20%;height: 30%;
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
-    /* 第三张网页的文本框，A代表第一页 */
+    /* 第三张网页的文本框，c代表第三页 */
     .textarea_C1{
         display: none;
         position:absolute;
-        left:20%;top:36%;
-        width: 15%;height: 18%;
+        left:19.8%;top:35%;
+        width: 20%;height: 18%;
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
     .textarea_C2{
         display: none;
         position:absolute;
         left:29%;top:31%;
         width: 20%;height: 25%;
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
     .textarea_C3{
         display: none;
         position:absolute;
         left:67%;top:35%;
         width: 20%;height: 24%;
-        
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
-    /* 第四张网页的文本框，A代表第一页 */
+    /* 第四张网页的文本框，d代表第四页 */
     .textarea_D1{
         display: none;
         position:absolute;
-        left:46.5%;top:34%;
-        width: 10%;height: 14%;
+        left:51.5%;top:34%;
+        width: 20%;height: 20%;
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
     .textarea_D2{
         display: none;
         position:absolute;
-        left:33%;top:44%;
-        width: 10%;height: 14%;
+        left:38%;top:56%;
+        width: 20%;height: 20%;
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
     .textarea_D3{
         display: none;
         position:absolute;
-        left:75%;top:45%;
-        width: 10%;height: 14%;
-        
+        left:67%;top:46%;
+        width: 20%;height: 20%;
+        border-color: #daa812;
+        border-width: 5px;
+        border-radius: 10px;
     }
  </style>
  
 </head>
+<body style="background-image: url(../../img/MainMap.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            margin:0">
+
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    
+    
+    <div class="container-fluid top-bar bg-dark text-light px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+    
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn-lg-square text-primary border-end rounded-0" href=""><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a class="btn-lg-square text-primary pe-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index1.html" class="navbar-brand ms-4 ms-lg-0">
+            <h1 class="text-primary m-0">The Silk Road</h1>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav mx-auto p-4 p-lg-0">
+                <a href="../home/home.html" class="nav-item nav-link">Home</a>
+                <a href="../geography/geography.html" class="nav-item nav-link">Geography</a>
+                <a href="../culture/culture.html" class="nav-item nav-link">Culture</a>
+                <a href="../personage/personage.html" class="nav-item nav-link">Personage</a>
+                <a href="../economics/economics.html" class="nav-item nav-link">Economics</a>
+                <a href="../politics/politics.html" class="nav-item nav-link active">Politics</a>
+                <a href="../game/game.html" class="nav-item nav-link">Game</a>
+    
+            </div>
+            <div class=" d-none d-lg-flex">
+                <div class="flex-shrink-0 btn-lg-square border border-light rounded-circle">
+                    <i class="fa fa-phone text-primary"></i>
+                </div>
+                <div class="ps-3">
+                    <small class="text-primary mb-0">Call Us</small>
+                    <p class="text-light fs-5 mb-0">+012 345 6789</p>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    
+    <!-- <img style="width:100%;height:auto;" src="../../img/MainMap.png"> -->
+    <div class='Politics' style="margin-top:100px;margin-left:100px;">
 <!-- 背景图片 -->
-<body style = "background-image: url(../../img/MainMap.png);
-                background-repeat: no-repeat;
-                background-size: 100%;
-                margin:0">
-    <div class="header">
-        <span>The Silk Road</span>
-      </div>
-      <div class='ribbon' id="header">
-        <a href='../home/home.html'><span>Home</span></a>
-        <a href='../geography/geography.html'><span>Geography</span></a>
-        <a href='../culture/culture.html'><span>Culture</span></a>
-        <a href='../personage/personage.html' ><span>Personage</span></a>
-        <a href='../economics/economics.html'><span>Economics</span></a>
-        <a href='../politics/politics.html'><span style="background-color: #FFD204;">Politics</span></a>
-        <a href='../game/game.html'><span>Game</span></a>
-    </div>            
+
+     
    
     <div class="main"> 
         
@@ -260,9 +386,33 @@
             <button id="btn_CirclerA1" onmouseover="Show_Info('A1')" onmouseleave="Show_Info('A1')"></button>
             <button id="btn_CirclerA2" onmouseover="Show_Info('A2')" onmouseleave="Show_Info('A2')"></button>
             <button id="btn_CirclerA3" onmouseover="Show_Info('A3')" onmouseleave="Show_Info('A3')"></button>
-            <textarea class = "textarea_A1"name="" id="A1" cols="30" rows="10" >良种马及其他适合长距离运输的动物也开始不断被人们所使用，令大规模的贸易文化交流成为可能。比如阿拉伯人的经常使用耐渴、耐旱、耐饿的单峰骆驼，在公元前11世纪便用于商旅运输。</textarea>
-            <textarea class = "textarea_A2"name="" id="A2" cols="30" rows="10" >欧亚大陆腹地是广阔的草原和肥沃的山谷，对于游牧民族和商队运输的牲畜而言可以随时随地安定下来，就近补给水、食物和燃料。这样一来一支商队、旅行队或军队可以在沿线各君主制国家没有注意到他们的存在或激发敌意的情况下，进行长期，持久而路途遥远的旅行。</textarea>
-            <textarea class = "textarea_A3"name="" id="A3" cols="30" rows="10" >早期的丝绸之路上并不是以丝绸为主要交易物资，在公元前15世纪左右，东亚商人就已经出入塔克拉玛干沙漠边缘，购买产自现新疆地区的和田玉石，同时出售海贝等沿海特产，同中亚地区进行小规模贸易往来。</textarea>
+            <!-- <div class = "textarea_A1"name="" id="A1" cols="30" rows="10" onmouseover="Show_Info('A1')" onmouseleave="Show_Info('A1')" readonly>良种马<br>及其他适合长距离运输的动物也开始不断被人们</div> -->
+            <textarea class = "textarea_A1"name="" id="A1" cols="30" rows="10" onmouseover="Show_Info('A1')" onmouseleave="Show_Info('A1')" readonly>Expansion of the Greek Empire (329 BCE-10 CE)
+        The next major step toward the development of the Silk Road was the expansion of the Macedonian empire of Alexander the Great into Central Asia. 
+        In August 329 BCE, at the mouth of the Fergana Valley, he founded the city of Alexandria Eschate or "Alexandria The Furthest".
+        The Greeks remained in Central Asia for the next three centuries, first through the administration of the Seleucid Empire, and then with the establishment of the Greco-Bactrian Kingdom (250-125 BCE) in Bactria (modern Afghanistan, Tajikistan, and Pakistan) and the later Indo-Greek Kingdom (180 BCE - 10 CE) in modern Northern Pakistan and Afghanistan. 
+        They continued to expand eastward, especially during the reign of Euthydemus (230-200 BCE), who extended his control beyond Alexandria Eschate to Sogdiana. There are indications that he may have led expeditions as far as Kashgar on the western edge of the Taklamakan Desert, leading to the first known contacts between China and the West around 200 BCE.
+            </textarea>
+            <textarea class = "textarea_A2"name="" id="A2" cols="30" rows="10" onmouseover="Show_Info('A2')" onmouseleave="Show_Info('A2')" readonly>Persian Royal Road (500-330 BCE)
+        By the time of Herodotus (c. 475 BCE), the Royal Road of the Persian Empire ran some 2,857 km (1,775 mi) from the city of Susa on the Karun (250 km (155 mi) east of the Tigris) to the port of Smyrna (modern İzmir in Turkey) on the Aegean Sea.
+        It was maintained and protected by the Achaemenid Empire (c. 500-330 BCE) and had postal stations and relays at regular intervals. 
+        By having fresh horses and riders ready at each relay, royal couriers could carry messages and traverse the length of the road in nine days, while normal travelers took about three months.</textarea>
+            <textarea class = "textarea_A3"name="" id="A3" cols="30" rows="10" onmouseover="Show_Info('A3')" onmouseleave="Show_Info('A3')" readonly>Chinese and Central Asian contacts (2nd millennium BCE)
+        Central Eurasia has been known from ancient times for its horse riding and horse breeding communities, and the overland Steppe Route across the northern steppes of Central Eurasia was in use long before that of the Silk Road.
+        Archeological sites such as the Berel burial ground in Kazakhstan, confirmed that the nomadic Arimaspians were not only breeding horses for trade but also produced great craftsmen able to propagate exquisite art pieces along the Silk Road. 
+        From the 2nd millennium BCE, nephrite jade was being traded from mines in the region of Yarkand and Khotan to China. Significantly, these mines were not very far from the lapis lazuli and spinel ("Balas Ruby") mines in Badakhshan, and, although separated by the formidable Pamir Mountains, routes across them were apparently in use from very early times.
+        The Tarim mummies, mummies of non-Mongoloid, apparently Caucasoid, individuals, have been found in the Tarim Basin, in the area of Loulan located along the Silk Road 200 kilometres (124 miles) east of Yingpan, dating to as early as 1600 BCE and suggesting very ancient contacts between East and West. 
+        These mummified remains may have been of people who spoke Indo-European languages, which remained in use in the Tarim Basin, in the modern day Xinjiang region, until replaced by Turkic influences from the Xiongnu culture to the north and by Chinese influences from the eastern Han dynasty, who spoke a Sino-Tibetan language.
+        Some remnants of what was probably Chinese silk dating from 1070 BCE have been found in Ancient Egypt. 
+        The Great Oasis cities of Central Asia played a crucial role in the effective functioning of the Silk Road trade.[25] The originating source seems sufficiently reliable, but silk degrades very rapidly, so it cannot be verified whether it was cultivated silk (which almost certainly came from China) or a type of wild silk, which might have come from the Mediterranean or Middle East.
+        Following contacts between Metropolitan China and nomadic western border territories in the 8th century BCE, gold was introduced from Central Asia, and Chinese jade carvers began to make imitation designs of the steppes, adopting the Scythian-style animal art of the steppes (depictions of animals locked in combat). 
+        This style is particularly reflected in the rectangular belt plaques made of gold and bronze, with other versions in jade and steatite. An elite burial near Stuttgart, Germany, dated to the 6th century BCE, was excavated and found to have not only Greek bronzes but also Chinese silks. 
+        Similar animal-shaped pieces of art and wrestler motifs on belts have been found in Scythian grave sites stretching from the Black Sea region all the way to Warring States era archaeological sites in Inner Mongolia (at Aluchaideng) and Shaanxi (at Keshengzhuang) in China.
+        The expansion of Scythian cultures, stretching from the Hungarian plain and the Carpathian Mountains to the Chinese Kansu Corridor, and linking the Middle East with Northern India and the Punjab, undoubtedly played an important role in the development of the Silk Road. 
+        Scythians accompanied the Assyrian Esarhaddon on his invasion of Egypt, and their distinctive triangular arrowheads have been found as far south as Aswan. 
+        These nomadic peoples were dependent upon neighbouring settled populations for a number of important technologies, and in addition to raiding vulnerable settlements for these commodities, they also encouraged long-distance merchants as a source of income through the enforced payment of tariffs. 
+        Sogdians played a major role in facilitating trade between China and Central Asia along the Silk Roads as late as the 10th century, their language serving as a lingua franca for Asian trade as far back as the 4th century. 
+            </textarea>
         </div>
         
         <script>
@@ -273,23 +423,51 @@
             <button id="btn_CirclerB1" onmouseover="Show_Info('B1')" onmouseleave="Show_Info('B1')" style="display: none;"></button>
             <button id="btn_CirclerB2" onmouseover="Show_Info('B2')" onmouseleave="Show_Info('B2')" style="display: none;"></button>
             <button id="btn_CirclerB3" onmouseover="Show_Info('B3')" onmouseleave="Show_Info('B3')" style="display: none;"></button>
-            <textarea class = "textarea_B1"name="" id="B1" cols="30" rows="10" ></textarea>
-            <textarea class = "textarea_B2"name="" id="B2" cols="30" rows="10" ></textarea>
-            <textarea class = "textarea_B3"name="" id="B3" cols="30" rows="10" ></textarea>
+            <textarea class = "textarea_B1"name="" id="B1" cols="30" rows="10" onmouseover="Show_Info('B1')" onmouseleave="Show_Info('B1')" readonly>
+        The Han Dynasty army regularly policed the trade route against nomadic bandit forces generallyidentified as Xiongnu. 
+        Han general Ban Chao led an army of 70,000 mounted infantry and light cavalry troops in the 1st century CE to secure the trade routes, reaching far west to the Tarim Basin. 
+        Ban Chao expanded his conquests across the Pamirs to the shores of the Caspian Sea and the borders of Parthia.
+        It was from here that the Han general dispatched envoy Gan Ying to Daqin (Rome). The Silk Road essentially came into being from the 1st century BCE, following these efforts by China to consolidate a road to the Western world and India, both through direct settlements in the area of the Tarim Basin and diplomatic relations with the countries of the Dayuan, Parthians and Bactrians further west. 
+        The Silk Roads were a "complex network of trade routes" that gave people the chance to exchange goods and culture.
+            </textarea>
+            <textarea class = "textarea_B2"name="" id="B2" cols="30" rows="10" onmouseover="Show_Info('B2')" onmouseleave="Show_Info('B2')" readonly>
+        The Chinese campaigned in Central Asia on several occasions, and direct encounters between Han troops and Roman legionaries (probably captured or recruited as mercenaries by the Xiong Nu) are recorded, particularly in the 36 BCE battle of Sogdiana (Joseph Needham, Sidney Shapiro). 
+        It has been suggested that the Chinese crossbow was transmitted to the Roman world on such occasions, although the Greek gastraphetes provides an alternative origin.
+            </textarea>
+            <textarea class = "textarea_B3"name="" id="B3" cols="30" rows="10" onmouseover="Show_Info('B3')" onmouseleave="Show_Info('B3')" readonly>
+        The Silk Road was initiated and spread by China's Han dynasty through exploration and conquests in Central Asia. With the Mediterranean linked to the Fergana Valley, the next step was to open a route across the Tarim Basin and the Hexi Corridor to China Proper. 
+        This extension came around 130 BCE, with the embassies of the Han dynasty to Central Asia following the reports of the ambassador Zhang Qian (who was originally sent to obtain an alliance with the Yuezhi against the Xiongnu). 
+        Zhang Qian visited directly the kingdom of Dayuan in Ferghana, the territories of the Yuezhi in Transoxiana, the Bactrian country of Daxia with its remnants of Greco-Bactrian rule,and Kangju. 
+        He also made reports on neighbouring countries that he did not visit, such as Anxi (Parthia), Tiaozhi (Mesopotamia), Shendu (Indian subcontinent) and the Wusun.
+        Zhang Qian's report suggested the economic reason for Chinese expansion and wall-building westward, and trail-blazed the Silk Road, making it one of the most famous trade routes in history and in the world.
+        After winning the War of the Heavenly Horses and the Han-Xiongnu War, Chinese armies established themselves in Central Asia, initiating the Silk Route as a major avenue of international trade. 
+        Some say that the Chinese Emperor Wu became interested in developing commercial relationships with the sophisticated urban civilizations of Ferghana, Bactria, and the Parthian Empire: "The Son of Heaven on hearing all this reasoned thus: Ferghana (Dayuan "Great Ionians") and the possessions of Bactria (Ta-Hsia) and Parthian Empire (Anxi) are large countries, full of rare things, with a population living in fixed abodes and given to occupations somewhat identical with those of the Chinese people, but with weak armies, and placing great value on the rich produce of China" (Hou Hanshu, Later Han History). 
+        Others say that Emperor Wu was mainly interested in fighting the Xiongnu and that major trade began only after the Chinese pacified the Hexi Corridor. The Silk Roads' origin lay in the hands of the Chinese. 
+        The soil in China lacked Selenium, a deficiency which contributed to muscular weakness and reduced growth in horses. 
+        Consequently, horses in China were too frail to support the weight of a Chinese soldier. The Chinese needed the superior horses that nomads bred on the Eurasian steppes, and nomads wanted things only agricultural societies produced, such as grain and silk. 
+        Even after the construction of the Great Wall, nomads gathered at the gates of the wall to exchange. Soldiers sent to guard the wall were often paid in silk which they traded with the nomads. 
+        Past its inception, the Chinese continued to dominate the Silk Roads, a process which was accelerated when "China snatched control of the Silk Road from the Hsiung-nu" and the Chinese general Cheng Ki "installed himself as protector of the Tarim at Wu-lei, situated between Kara Shahr and Kucha." "China's control of the Silk Road at the time of the later Han, by ensuring the freedom of transcontinental trade along the double chain of oases north and south of the Tarim, favoured the dissemination of Buddhism in the river basin, and with it Indian literature and Hellenistic art."
+        The Chinese were also strongly attracted by the tall and powerful horses (named "Heavenly horses") in the possession of the Dayuan (literally the "Great Ionians", the Greek kingdoms of Central Asia), which were of capital importance in fighting the nomadic Xiongnu. They defeated the Dayuan in the Han-Dayuan war. 
+        The Chinese subsequently sent numerous embassies, around ten every year, to these countries and as far as Seleucid Syria.
+                </textarea>
         </div>
         <!-- 第三页的组件 -->
         <div>
             <button id="btn_CirclerC1" onmouseover="Show_Info('C1')" onmouseleave="Show_Info('C1')" style="display: none;"></button>
             <button id="btn_CirclerC2" onmouseover="Show_Info('C2')" onmouseleave="Show_Info('C2')" style="display: none;"></button>
             <button id="btn_CirclerC3" onmouseover="Show_Info('C3')" onmouseleave="Show_Info('C3')" style="display: none;"></button>
-            <textarea class = "textarea_C1"name="" id="C1" cols="30" rows="10" >Roman Empire (30 BCE-3rd century CE)
-            Soon after the Roman conquest of Egypt in 30 BCE, regular communications and trade between China, Southeast Asia, India, the Middle East, Africa, and Europe blossomed on an unprecedented scale.  The Roman Empire inherited eastern trade routes that were part of the Silk Road from the Evolution.
+            <textarea class = "textarea_C1"name="" id="C1" cols="30" rows="10" onmouseover="Show_Info('C1')" onmouseleave="Show_Info('C1')" readonly>Roman Empire (30 BCE-3rd century CE)
+        Soon after the Roman conquest of Egypt in 30 BCE, regular communications and trade between China, Southeast Asia, India, the Middle East, Africa, and Europe blossomed on an unprecedented scale. 
+        The Roman Empire inherited eastern trade routes that were part of the Silk Road from the Evolution.
             </textarea>
-            <textarea class = "textarea_C2"name="" id="C2" cols="30" rows="10" >Byzantine Empire (6th-14th centuries)
-                the Byzantine Emperor Justinian (ruled 527- 565) as spies on the Silk Road from Constantinople to China and back to steal the silkworm eggs, resulting in silk production in the Mediterranean, particularly in Thrace in northern Greece, and giving the Byzantine Empire a monopoly on silk production in medieval Europe.  In 568 the Byzantine ruler Justin II was greeted by a Sogdian embassy representing Istämi, ruler of the First Turkic Khaganate, who formed an alliance with the Byzantines against Khosrow I of the Sasanian Empire that allowed the Byzantines to bypass the Sasanian merchants and trade directly with the Sogdians for purchasing Chinese silk.
+            <textarea class = "textarea_C2"name="" id="C2" cols="30" rows="10" onmouseover="Show_Info('C2')" onmouseleave="Show_Info('C2')" readonly>Byzantine Empire (6th-14th centuries)
+        the Byzantine Emperor Justinian (ruled 527- 565) as spies on the Silk Road from Constantinople to China and back to steal the silkworm eggs, resulting in silk production in the Mediterranean, particularly in Thrace in northern Greece, and giving the Byzantine Empire a monopoly on silk production in medieval Europe.
+        In 568 the Byzantine ruler Justin II was greeted by a Sogdian embassy representing Istämi, ruler of the First Turkic Khaganate, who formed an alliance with the Byzantines against Khosrow I of the Sasanian Empire that allowed the Byzantines to bypass the Sasanian merchants and trade directly with the Sogdians for purchasing Chinese silk.
             </textarea>
-            <textarea class = "textarea_C3"name="" id="C3" cols="30" rows="10" >Tang dynasty (7th century)
-                The Tang dynasty conquered and subdued Central Asia during the 640s and 650s.During Emperor Taizong's reign alone, large campaignswere launched against not only the Göktürks, but also separatecampaigns against the Tuyuhun, the oasis states, and the Xueyantuo.Under Emperor Taizong, Tang general Li Jing conqueredthe Eastern Turkic Khaganate. Under Emperor Gaozong,Tang general Su Dingfang conquered the Western TurkicKhaganate, an important ally of the Byzantine empire.After these conquests, the Tang dynasty fully controlledthe Xiyu, which was the strategic location astride the SilkRoad. This led the Tang dynasty to reopen the SilkRoad, with this portion named the Tang-Tubo Road("Tang-Tibet Road") in many historical texts.
+            <textarea class = "textarea_C3"name="" id="C3" cols="30" rows="10" onmouseover="Show_Info('C3')" onmouseleave="Show_Info('C3')" readonly>Tang dynasty (7th century)
+        The Tang dynasty conquered and subdued Central Asia during the 640s and 650s.During Emperor Taizong's reign alone, large campaignswere launched against not only the Göktürks, but also separatecampaigns against the Tuyuhun, the oasis states, and the Xueyantuo.Under Emperor Taizong, Tang general Li Jing conqueredthe Eastern Turkic Khaganate. 
+        Under Emperor Gaozong,Tang general Su Dingfang conquered the Western TurkicKhaganate, an important ally of the Byzantine empire.After these conquests, the Tang dynasty fully controlledthe Xiyu, which was the strategic location astride the SilkRoad. 
+        This led the Tang dynasty to reopen the SilkRoad, with this portion named the Tang-Tubo Road("Tang-Tibet Road") in many historical texts.
             </textarea>
         </div>
         <!-- 第四页的组件 -->
@@ -297,21 +475,32 @@
             <button id="btn_CirclerD1" onmouseover="Show_Info('D1')" onmouseleave="Show_Info('D1')" style="display: none;"></button>
             <button id="btn_CirclerD2" onmouseover="Show_Info('D2')" onmouseleave="Show_Info('D2')" style="display: none;"></button>
             <button id="btn_CirclerD3" onmouseover="Show_Info('D3')" onmouseleave="Show_Info('D3')" style="display: none;"></button>
-            <textarea class = "textarea_D1"name="" id="D1" cols="30" rows="10" ></textarea>
-            <textarea class = "textarea_D2"name="" id="D2" cols="30" rows="10" ></textarea>
-            <textarea class = "textarea_D3"name="" id="D3" cols="30" rows="10" ></textarea>
+            <textarea class = "textarea_D1"name="" id="D1" cols="30" rows="10" onmouseover="Show_Info('D1')" onmouseleave="Show_Info('D1')" readonly>Railway (1990)
+        The Eurasian Land Bridge, a railway through China, Kazakhstan, Mongolia and Russia, is sometimes referred to as the "New Silk Road". 
+        The last link in one of these two railway routes was completed in 1990, when the railway systems of China and Kazakhstan connected at Alataw Pass (Alashan Kou). 
+        In 2008 the line was used to connect the cities of Ürümqi in China's Xinjiang Province to Almaty and Nur-Sultan in Kazakhstan.
+        In October 2008 the first Trans-Eurasia Logistics train reached Hamburg from Xiangtan. Starting in July 2011 the line has been used by a freight service that connects Chongqing, China with Duisburg, Germany, cutting travel time for cargo from about 36 days by container ship to just 13 days by freight train. 
+        In 2013, Hewlett-Packard began moving large freight trains of laptop computers and monitors along this rail route.
+        In January 2017, the service sent its first train to London. The network additionally connects to Madrid andMilan.
+            </textarea>
+            <textarea class = "textarea_D2"name="" id="D2" cols="30" rows="10" onmouseover="Show_Info('D2')" onmouseleave="Show_Info('D2')" readonly>Maritime Silk Road
+        The maritime Silk Road follows the old trade route that was opened by the Chinese admiral Zheng He during the early Ming Dynasty. 
+        In particular, the establishment of the lockless Suez Canal then strongly promoted maritime trade between Asia and Europe in this area. 
+        While many trade flows were interrupted in the 20th century by the World Wars, the Suez Crisis and the Cold War, from the beginning of the 21st century many of the trading centers that had already existed in the 19th century were activated again.
+        The Suez Canal was also continually expanded and its time saving role in Asia-Europe trade was highlighted. 
+        At the beginning of the Maritime Silk Road are the major Chinese ports in Shanghai, Shenzhen and Ningbo-Zhoushan. The Chinese investments in Africa will connect large areas of Central and East Africa to the maritime Silk Road and thus to China and directly to southern Europe via the Suez Canal. 
+        The increasing importance of the Mediterranean as a trading center with its direct, fast connections to Central and Eastern Europe is evident from the international investments in port cities of Piraeus and Trieste. Trieste in particular plays a major role in the economic zone in Central Europe known as the Blue Banana.
+        This includes a banana-shaped corridor from southern England via the Benelux region, western Germany and Switzerland to northern Italy. The transport via Trieste instead of northern ports such as Rotterdam and Hamburg shortens the delivery time from Shanghai by ten days and from Hong Kong by nine days. 
+        On the maritime Silk Road, on which more than half of all containers in the world are already on the move, deep-water ports are being expanded, logistics hubs are being built and new transport routes such as railways and roads in the hinterland are being created.
+            </textarea>
+            <textarea class = "textarea_D3"name="" id="D3" cols="30" rows="10" onmouseover="Show_Info('D3')" onmouseleave="Show_Info('D3')" readonly>Belt and Road Initiative (2013)
+        During a September 2013 a visit to Kazakhstan, China's Chinese President Xi Jinping introduced a plan for a New Silk Road from China to Europe. 
+        The latest iterations of this plan, dubbed the "Belt and Road Initiative" (BRI), includes a land-based Silk Road Economic Belt and a 21st Century Maritime Silk Road, with primary points in Ürümqi, Dostyk, Nur-Sultan, Gomel, the Belarussian city of Brest, and the Polish cities of Małaszewicze and Łódź—which would be hubs of logistics and transshipment to other countries of Europe.
+        On 15 February 2016, with a change in routing, the first train dispatched under the scheme arrived from eastern Zhejiang Province to Tehran. 
+        Though this section does not complete the SilkRoad-style overland connection between China and Europe, but new railway line connecting China to Europe via Istanbul's has now been established. The actual route went through Almaty, Bishkek, Samarkand, and Dushanbe.
+            </textarea>
         </div>
     </div>
-    <script type="text/javascript">//让导航栏吸附到顶部
-        window.addEventListener('scroll', function(){
-          let t = $('body, html').scrollTop();   // 目前监听的是整个body的滚动条距离
-          if(t>190){
-             $('.ribbon').addClass('box-active')
-         }else{
-             $('.ribbon').removeClass('box-active')
-         }
-      })  
-    </script>      
     
     <script>        
         /* 时间轴 */
@@ -330,6 +519,9 @@
             } 
             else {
                 div.style.display = "block";
+                // div.style.position = "absolute";
+                // div.style.left = screenX;
+                // div.style.right = screenY;
             }
 
             // document.getElementById("textarea_First").style.display = "block";   
