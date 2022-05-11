@@ -3,7 +3,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Quizo HTML Template - V.1</title>
+   <title>The Silk Road Museum-Game</title>
    <!-- FontAwesome-cdn include -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
    <!-- Google fonts -->
@@ -75,7 +75,7 @@
             <div class="step rounded-pill d-inline-block text-center position-relative">3</div>
             <div class="step rounded-pill d-inline-block text-center position-relative">4</div>
          </div>
-         <form class="multisteps_form position-relative" id="wizard" method="POST" action="../thankyou/index-1.html">
+         <form class="multisteps_form position-relative" id="wizard" method="POST" action="game.html">
             <!------------------------- Step-1 ----------------------------->
             <div class="multisteps_form_panel active" data-animation="slideVert">
                <div class="form_content">
@@ -284,9 +284,37 @@
                <!---------- Form Button ---------->
                <div class="form_btn py-5 d-flex justify-content-center align-items-center">
                   <button type="button" class="js-btn-prev f_btn rounded-pill disable text-uppercase" id="prevBtn"><span><i class="fas fa-arrow-left pe-1"></i></span> Last Question</button>
-                  <button type="submit" class="f_btn rounded-pill active text-uppercase" id="nextBtn"> Submit</button>
+                  <button type="button" class="js-btn-next f_btn rounded-pill active text-uppercase" id="nextBtn"> Submit <span><i class="fas fa-arrow-right ps-1"></i></span></button>
                </div>
             </div>
+                        <!------------------------- Step-final ----------------------------->
+            <div class="multisteps_form_panel" data-animation="slideVert">
+               <div class="form_content">
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <div class="form_title ps-5">
+                           <h1 class="text-white">Congratulations, you answered all the questions correctly!</h1>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 text-center">
+                        <div class="form_img">
+                           <img src="static/picture/bg_4.png" alt="image_not_found">
+                        </div>
+                     </div>
+                     <div class="col-lg-4 text-end">
+                        <div class="form_items radio-list">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!---------- Form Button ---------->
+               <div class="form_btn py-5 d-flex justify-content-center align-items-center">
+                  <button href="game.html" class="js-btn-prev f_btn rounded-pill disable text-uppercase" id="prevBtn">Try again</button>
+               </div>
+            </div>
+         </form>
+         <form class="multisteps_form position-relative" id="wizard" method="POST" action="../home/home.html">
+            <button href="../home/home.html" class="f_btn rounded-pill active text-uppercase text-center align-content-center" id="nextBtn"> Back to home</button>
          </form>
       </div>
       
