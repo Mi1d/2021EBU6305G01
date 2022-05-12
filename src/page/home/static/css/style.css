@@ -304,9 +304,6 @@ h6,
     transition: .5s;
 }
 
-.team-item:hover .team-title {
-    top: -100px;
-}
 
 .team-item .team-social {
     position: absolute;
