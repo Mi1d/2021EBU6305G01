@@ -227,11 +227,15 @@ $(function(){
     // yourAnswer.push($('.radio-list input:checked').val());
     $('.radio-list input:checked').each(function(i,n){
       yourAnswer.push($(n).val());
+      // console.log(typeof($(n).val()));console.log(yourAnswer.length);
     })
 
     console.log("submit!");console.log("\n your answer:"+yourAnswer);
     var form = $('#wizard');
-    var checkFlag=1;//默认答错
+    var checkFlag;//默认答错
+    // if(yourAnswer==["A","B","C","D"]){checkFlag=0;}
+    if((yourAnswer[0]=="A")&&(yourAnswer[1]=="B")&&(yourAnswer[2]=="C")&&(yourAnswer[3]=="D")){checkFlag=0;}
+    else{checkFlag=1;}
     var parent_fieldset = $('.multisteps_form_panel.active');
     var next_step = true;
     //如果没选会提示让你选
