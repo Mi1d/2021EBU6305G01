@@ -4,12 +4,14 @@
 // Author        :  jthemes (https://themeforest.net/user/jthemes)
 // ==================================================
 $(function(){
+  var yourAnswer=[];
   // "use strict";
   
   // ========== Form-select-option ========== //
   $('.radio-list input').click(function () {
     $('input:not(:checked)').parent().removeClass("active");
     $('input:checked').parent().addClass("active");
+     //yourAnswer[0]= $('input:checked').val();
   }); 
   
   
@@ -33,7 +35,8 @@ $(function(){
     stepFormPanelClass: 'multisteps_form_panel',
     stepFormPanels: document.querySelectorAll('.multisteps_form_panel'),
     stepPrevBtnClass: 'js-btn-prev',
-    stepNextBtnClass: 'js-btn-next'
+    stepNextBtnClass: 'js-btn-next',
+    checkAnswerClass:'js-btn-check',
   };
   
   
@@ -178,7 +181,7 @@ $(function(){
     const eventTarget = e.target;
     
     //check if we clicked on `PREV` or NEXT` buttons
-    if (!(eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`) || eventTarget.classList.contains(`${DOMstrings.stepNextBtnClass}`))) {
+    if (!(eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`)||eventTarget.classList.contains(`${DOMstrings.checkAnswerClass}`) || eventTarget.classList.contains(`${DOMstrings.stepNextBtnClass}`))) {
       return;
     }
     
@@ -220,6 +223,41 @@ $(function(){
       
       
     } 
+  else if(eventTarget.classList.contains(`${DOMstrings.checkAnswerClass}`)  ) { 
+    // yourAnswer.push($('.radio-list input:checked').val());
+    $('.radio-list input:checked').each(function(i,n){
+      yourAnswer.push($(n).val());
+    })
+
+    console.log("submit!");console.log("\n your answer:"+yourAnswer);
+    var form = $('#wizard');
+    var checkFlag=1;//默认答错
+    var parent_fieldset = $('.multisteps_form_panel.active');
+    var next_step = true;
+    //如果没选会提示让你选
+    parent_fieldset.find('.required').each( function(){
+      next_step = false;
+      var form = $('.required');
+      form.validate();
+      $(this).addClass('invalid is-invalid');
+    }); 
+    //开始判断做没做对
+    
+    if( next_step === true || form.valid() === true ) {
+      if(checkFlag==0){//如果做对，就到做对的页
+        activePanelNum++; 
+        setActiveStep(activePanelNum);
+        setActivePanel(activePanelNum);
+      }
+      else if(checkFlag==1){//如果做错，就到做错的页
+        activePanelNum++; activePanelNum++;console.log("hey!wrong!");
+      setActiveStep(activePanelNum);
+      setActivePanel(activePanelNum);
+      }
+    }
+    
+    
+  } 
     
     
   });
